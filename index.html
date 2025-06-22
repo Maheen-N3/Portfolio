@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maheen N</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles to override or extend Tailwind, mainly for fonts and subtle adjustments */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020202; /* Very dark background, mimicking video aesthetic */
+            color: #e0e0e0; /* Light grey for general text */
+        }
+        .section-padding {
+            padding-top: 6rem; /* More generous padding for sections */
+            padding-bottom: 6rem;
+        }
+        .text-gradient-blue {
+            background: linear-gradient(to right, #63b3ed, #4299e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Specific styling for cards to give a subtle depth */
+        .card-bg {
+            background-color: #1a1a1a; /* Slightly lighter than body for contrast */
+            border: 1px solid #2d2d2d;
+        }
+        /* Style for active navigation link */
+        .nav-link.active {
+            color: #63b3ed; /* Highlight active link */
+            border-bottom: 2px solid #63b3ed;
+        }
+        /* Cursor animation for typing effect */
+        .typing-cursor {
+            display: inline-block;
+            background-color: white;
+            width: 3px;
+            height: 1.2em; /* Adjust height to match font size */
+            margin-left: 2px;
+            animation: blink 0.7s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-900 bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-lg fixed w-full z-20 top-0">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo/Name -->
+            <a href="#home" class="text-3xl font-extrabold text-white rounded-md p-2 hover:text-blue-400 transition duration-300">
+                Maheen<span class="text-blue-400">.</span>N
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-lg text-gray-300 hover:text-blue-400 transition duration-300 p-2 rounded-md">Home</a>
+                <a href="#about" class="nav-link text-lg text-gray-300 hover:text-blue-400 transition duration-300 p-2 rounded-md">About</a>
+                <a href="#skills" class="nav-link text-lg text-gray-300 hover:text-blue-400 transition duration-300 p-2 rounded-md">Skills</a>
+                <a href="#projects" class="nav-link text-lg text-gray-300 hover:text-blue-400 transition duration-300 p-2 rounded-md">Projects</a>
+                <a href="#contact" class="nav-link text-lg text-gray-300 hover:text-blue-400 transition duration-300 p-2 rounded-md">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-button" class="text-gray-300 hover:text-blue-400 focus:outline-none transition duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 py-4 shadow-xl">
+            <a href="#home" class="block text-gray-300 hover:text-blue-400 px-6 py-3 transition duration-300 text-lg">Home</a>
+            <a href="#about" class="block text-gray-300 hover:text-blue-400 px-6 py-3 transition duration-300 text-lg">About</a>
+            <a href="#skills" class="block text-gray-300 hover:text-blue-400 px-6 py-3 transition duration-300 text-lg">Skills</a>
+            <a href="#projects" class="block text-gray-300 hover:text-blue-400 px-6 py-3 transition duration-300 text-lg">Projects</a>
+            <a href="#contact" class="block text-gray-300 hover:text-blue-400 px-6 py-3 transition duration-300 text-lg">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-12 relative overflow-hidden">
+        <div class="container mx-auto px-4 py-12 flex flex-col md:flex-row items-center justify-center gap-12">
+            <!-- Text Content (left on desktop, top on mobile) -->
+            <div class="md:w-1/2 order-2 md:order-1 text-left md:pl-[5%]">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4">
+                    Hi, I'm<br><span class="text-gradient-blue">Maheen N</span>
+                </h1>
+                <p class="text-2xl md:text-3xl text-gray-400 mb-6 font-light">
+                    <span class="font-semibold text-white">
+                        <span id="typing-text"></span><span class="typing-cursor"></span>
+                    </span>
+                </p>
+                <p class="text-lg md:text-xl text-gray-300 max-w-xl md:mx-0 mb-8">
+<!-- home page discription -->
+                </p>
+                <div class="flex justify-start space-x-4">
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-flex items-center text-lg">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="text-white bg-gray-700 hover:bg-gray-600 py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-flex items-center text-lg">
+                        <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                    </a>
+                </div>
+            </div>
+            <!-- Image (right on desktop, bottom on mobile) -->
+            <div class="md:w-1/2 flex justify-center order-1 md:order-2">
+                <img src="C:\Users\mahe3\Downloads\Intense Gaze in Shadows.png" alt="Java Developer Profile" 
+                     class="w-64 h-64 md:w-96 md:h-96 object-cover rounded-full shadow-2xl border-4 border-blue-600 transform transition-transform duration-500 hover:scale-105">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient-blue">About Me</h2>
+        <div class="card-bg p-8 md:p-12 max-w-4xl mx-auto rounded-xl shadow-xl transition-transform duration-300 hover:scale-[1.01]">
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                I am a dedicated and innovative Java developer with 2 years of hands-on experience in building high-performance, scalable, and resilient applications. My journey in software development has been driven by a relentless curiosity and a passion for problem-solving.
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                My expertise lies in crafting robust backend systems using Spring Boot, designing efficient database schemas, and implementing secure RESTful APIs. I'm also proficient in cloud deployment strategies, leveraging platforms like AWS to ensure seamless application delivery.
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                I believe in continuous learning and adapting to new technologies. My goal is to contribute to meaningful projects, collaborate with talented individuals, and create software that makes a tangible impact.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient-blue">My Skills<br><br></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Skill Card: Core Java -->
+            <div class="card-bg p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                <i class="fab fa-java text-5xl mb-4 text-blue-400"></i>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Core Java</h3>
+                <p class="text-gray-300">OOP, Data Structures, Algorithms, Multithreading, Generics, Collections.</p>
+            </div>
+            <!-- Skill Card: Frameworks -->
+            <div class="card-bg p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                <i class="fas fa-cogs text-5xl mb-4 text-blue-400"></i>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Frameworks</h3>
+                <p class="text-gray-300">Spring Boot, Spring MVC, Hibernate, JPA, JUnit, Mockito.</p>
+            </div>
+            <!-- Skill Card: Databases -->
+            <div class="card-bg p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                <i class="fas fa-database text-5xl mb-4 text-blue-400"></i>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Databases</h3>
+                <p class="text-gray-300">MySQL, PostgreSQL, MongoDB, Oracle SQL, Redis.</p>
+            </div>
+            <!-- Skill Card: Cloud & DevOps -->
+            <div class="card-bg p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                <i class="fas fa-cloud text-5xl mb-4 text-blue-400"></i>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Cloud & DevOps</h3>
+                <p class="text-gray-300">AWS (EC2, S3, RDS, Lambda), Docker, Kubernetes, CI/CD, Git.</p>
+            </div>
+            <!-- Skill Card: Web Technologies -->
+            <div class="card-bg p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                <i class="fas fa-globe text-5xl mb-4 text-blue-400"></i>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Web Technologies</h3>
+                <p class="text-gray-300">RESTful APIs, Microservices, HTML5, CSS3, JavaScript, React Basics.</p>
+            </div>
+            <!-- Skill Card: Tools & Methodologies -->
+            <div class="card-bg p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.03]">
+                <i class="fas fa-tools text-5xl mb-4 text-blue-400"></i>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Tools & Methodologies</h3>
+                <p class="text-gray-300">Maven, Gradle, IntelliJ IDEA, VS Code, Agile, Scrum.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient-blue">My Projects<br><br></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <!-- Project Card 1 -->
+            <div class="card-bg p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                <h3 class="text-2xl font-semibold mb-4 text-white">E-commerce Backend API</h3>
+                <p class="text-gray-300 mb-6 text-lg">
+                    A scalable backend API for an e-commerce platform, handling product catalog, user authentication, orders, and payment integration.
+                </p>
+
+                <div class="flex justify-center space-x-4">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-full font-semibold transition duration-300 transform hover:scale-105 inline-flex items-center">
+                        <i class="fas fa-link mr-2"></i>Live Demo
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded-full font-semibold transition duration-300 transform hover:scale-105 inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="card-bg p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                <h3 class="text-2xl font-semibold mb-4 text-white">Real-time Chat Application</h3>
+                <p class="text-gray-300 mb-6 text-lg">
+                    A real-time, WebSocket-based chat application demonstrating microservices architecture and efficient message broadcasting.
+                </p>
+
+                <div class="flex justify-center space-x-4">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-full font-semibold transition duration-300 transform hover:scale-105 inline-flex items-center">
+                        <i class="fas fa-link mr-2"></i>Live Demo
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded-full font-semibold transition duration-300 transform hover:scale-105 inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="card-bg p-8 text-center rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                <h3 class="text-2xl font-semibold mb-4 text-white">Cloud-based Task Manager</h3>
+                <p class="text-gray-300 mb-6 text-lg">
+                    A serverless task management application deployed on AWS, utilizing Lambda functions, API Gateway, and DynamoDB.
+                </p>
+
+                <div class="flex justify-center space-x-4">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-full font-semibold transition duration-300 transform hover:scale-105 inline-flex items-center">
+                        <i class="fas fa-link mr-2"></i>Live Demo
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded-full font-semibold transition duration-300 transform hover:scale-105 inline-flex items-center">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </a>
+                </div>
+            </div>
+            <!-- Add more project cards as needed following the same structure -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient-blue">Get In Touch</h2>
+        <div class="card-bg p-8 md:p-12 max-w-2xl mx-auto rounded-xl shadow-xl transition-transform duration-300 hover:scale-[1.01]">
+            <p class="text-lg text-gray-300 text-center mb-8">
+                I'm always open to new opportunities, collaborations, and discussions. Feel free to reach out!
+            </p>
+            <form action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" 
+                           class="w-full px-5 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 transition duration-300" 
+                           placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" 
+                           class="w-full px-5 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 transition duration-300" 
+                           placeholder="your.email@example.com" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="6" 
+                              class="w-full px-5 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 transition duration-300" 
+                              placeholder="Your message..." required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                        Send Message <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </div>
+            </form>
+            <div class="text-center mt-10">
+                <p class="text-gray-400 text-lg">You can also find me on:</p>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" 
+                       class="text-gray-400 hover:text-white text-3xl transition duration-300 transform hover:scale-110">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" 
+                       class="text-gray-400 hover:text-white text-3xl transition duration-300 transform hover:scale-110">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <!-- Add more social links as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 rounded-t-xl mt-16">
+        <p>&copy; 2025 Maheen N. All rights reserved.</p>
+        <p class="text-sm mt-2">"Move in silence; only speak when it is time to say <strong>checkmate</strong>"</p>
+    </footer>
+
+    <script>
+        // Get all navigation links
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section'); // Assuming each major section has the 'section' tag or a common class
+
+        // Mobile menu toggle logic
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Function to set active link based on scroll position
+        const setActiveLink = () => {
+            let currentActive = null;
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - document.querySelector('nav').offsetHeight - 1; // Adjust for sticky header
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentActive = section.id;
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentActive) {
+                    link.classList.add('active');
+                }
+            });
+        };
+
+        // Smooth scrolling for navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                const offset = document.querySelector('nav').offsetHeight; // Get height of fixed navbar
+                window.scrollTo({
+                    top: targetSection.offsetTop - offset,
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Typing effect for multiple texts
+        const typingTextElement = document.getElementById('typing-text');
+        const textsToType = ["Java Developer", "Web Developer"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100; // Milliseconds per character
+        const deletingSpeed = 50; // Milliseconds per character
+        const pauseBetweenTexts = 1500; // Milliseconds to pause after typing/deleting
+
+        function typeLoop() {
+            const currentText = textsToType[textIndex];
+            if (isDeleting) {
+                // Deleting text
+                typingTextElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % textsToType.length; // Move to the next text
+                    setTimeout(typeLoop, typingSpeed); // Start typing next text
+                } else {
+                    setTimeout(typeLoop, deletingSpeed);
+                }
+            } else {
+                // Typing text
+                typingTextElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+                if (charIndex === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(typeLoop, pauseBetweenTexts); // Pause after typing
+                } else {
+                    setTimeout(typeLoop, typingSpeed);
+                }
+            }
+        }
+
+        // Call setActiveLink on scroll and initial load
+        window.addEventListener('scroll', setActiveLink);
+        window.addEventListener('load', () => {
+            setActiveLink(); // Set active link on page load
+            typeLoop(); // Start the typing animation loop
+        });
+    </script>
+</body>
+</html>
